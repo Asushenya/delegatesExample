@@ -13,6 +13,7 @@ namespace ConsoleApplication1
             Car c = new Car(20, 0, "Audi");
 
             c.AddMethodToDelegate(HanderMethod);
+            c.AddMethodToDelegate(HandlerToUpperMethod);
 
             for (int i = 0; i < 5; i++)
             {
@@ -25,6 +26,10 @@ namespace ConsoleApplication1
             Console.WriteLine($"->{msg}<-");
         }
 
+        public static void HandlerToUpperMethod(string msg)
+        {
+            Console.WriteLine($"=>--------------------------------------------{msg}--<=".ToUpper());
+        }
     }
 
     class Car
